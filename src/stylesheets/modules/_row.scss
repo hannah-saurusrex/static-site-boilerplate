@@ -1,0 +1,123 @@
+.row {
+
+    // @mixin clearfix;
+
+    
+    &--gutters-work {
+        margin-right: -65px;
+    }
+
+    &--gutters-contact {
+        margin-right: -80px;
+    }
+
+    &--gutters-small {
+        margin-right: -40px;
+    }
+
+    &--gutters-large {
+        margin-right: -85px;
+    }
+
+    &--gutters-pink {
+        background-color: $mainPink;
+    }
+
+    &--gutters-work > div {
+        padding-right: 65px;
+    }
+
+    &--gutters-contact > div {
+        padding-right: 80px;
+    }
+
+    &--gutters-small > div {
+        padding-right: 40px;
+    }
+
+    &--gutters-large > div {
+        padding-right: 85px;
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+
+    @mixin atMedium {
+
+        &__b-margin-until-medium {
+            margin-bottom: 0;
+        }
+
+        &__medium-4 {
+            float: left;
+            width: 33.33%;
+        }
+
+        &__medium-4--larger {
+            width: 37%;
+        }
+
+        &__medium-6 {
+            float: left;
+            width: 50%;
+        }
+    
+        &__medium-8 {
+            float: left;
+            width: 66.66%;
+        }
+
+        &__medium-8--smaller {
+            width: 63%;
+        }
+    }
+
+    @mixin atLarge {
+
+        &__b-margin-until-large {
+            margin-bottom: 0;
+        }
+
+        &__large-4 {
+            float: left;
+            width: 33.33%;
+        }
+
+        &__large-4--larger {
+            width: 37%;
+        }
+    
+        &__large-8 {
+            float: left;
+            width: 66.66%;
+        }
+
+        &__large-8--smaller {
+            width: 63%;
+        }
+    }
+
+    /* begin equal height rules */
+    &--equal-height-at-medium {
+        @mixin atMedium {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+
+    &--equal-height-at-large {
+        @mixin atLarge {
+            display: flex;
+        }
+
+        & > div {
+            float: none;
+            display: flex;
+        }
+    }
+}

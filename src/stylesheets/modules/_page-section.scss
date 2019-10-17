@@ -1,0 +1,20 @@
+.page-section {
+    padding: 1.2rem 0;
+
+    @mixin atMedium {
+        padding: 2rem 0;
+    }
+
+    &--no-b-padding-until-large {
+        padding-bottom: 0;
+
+        @mixin atLarge {
+            padding-bottom: 2.5rem;
+        }
+    }
+    
+    &--pink {
+        background-color: $mainPink;
+        color: #2B2B2B;
+    }
+}
